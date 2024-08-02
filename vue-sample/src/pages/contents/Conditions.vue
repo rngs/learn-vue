@@ -1,8 +1,10 @@
 <template>
     <div>
-        <Title label="見出し"/>
-        <First />
-        <Buttons />
+        <Title label="見出し" v-b-toggle.condisions />
+        <b-collapse id="condisions" visible="true">
+            <First />
+            <Buttons />
+        </b-collapse>
     </div>
 </template>
 
