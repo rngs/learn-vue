@@ -1,18 +1,18 @@
 <template>
     <div>
         <Title label="見出し"/>
-        <Subtitle label="サブタイトル"/>
+        <First />
     </div>
 </template>
 
 <script>
-    import Subtitle from "../common/snipets/titles/Subtitle";
-import Title from "../common/snipets/titles/Title";
+    import Title from "../common/snipets/titles/Title";
+import First from "./conditions/First";
 
     export default {
         components: {
-            Title,
-            Subtitle
+            First,
+            Title
         }
     };
 </script>
