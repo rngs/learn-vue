@@ -1,3 +1,3 @@
 <template>
-    <b-button variant="outline-secondary">クリア</b-button>
+    <b-button type="reset" variant="outline-secondary">クリア</b-button>
 </template>

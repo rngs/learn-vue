@@ -1,3 +1,3 @@
 <template>
-    <b-button variant="primary">検索</b-button>
+    <b-button type="submit" variant="primary">検索</b-button>
 </template>
