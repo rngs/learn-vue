@@ -1,14 +1,18 @@
 <template>
     <div>
         <Title label="見出し"/>
+        <Subtitle label="サブタイトル"/>
     </div>
 </template>
 
 <script>
-    import Title from "../common/snipets/titles/Title";
+    import Subtitle from "../common/snipets/titles/Subtitle";
+import Title from "../common/snipets/titles/Title";
+
     export default {
         components: {
-            Title
+            Title,
+            Subtitle
         }
     };
 </script>
