@@ -2,8 +2,10 @@
     <div>
         <Title label="見出し" v-b-toggle.condisions />
         <b-collapse id="condisions" visible="true">
-            <First />
-            <Buttons />
+            <b-form @submit="onSubmit" @reset="onReset">
+                <First />
+                <Buttons />
+            </b-form>
         </b-collapse>
     </div>
 </template>
