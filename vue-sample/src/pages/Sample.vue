@@ -5,6 +5,8 @@
 </template>
 
 <script>
+  import { breadcrumb } from "./scripts/data";
+
   import Breadcrumb from "./common/snipets/breadcrumb/Breadcrumb";
 
   export default {
@@ -13,20 +15,7 @@
     },
     data() {
       return {
-        breadcrumb: [
-          {
-            text: 'Admin',
-            href: '#'
-          },
-          {
-            text: 'Manage',
-            href: '#'
-          },
-          {
-            text: 'Library',
-            active: true
-          }
-        ]
+        breadcrumb
       }
     }
   };
