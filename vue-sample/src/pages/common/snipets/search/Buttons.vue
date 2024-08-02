@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-5">
+    <div class="mt-5 text-center">
         <ClearButton class="me-5" />
         <SearchButton />
     </div>
