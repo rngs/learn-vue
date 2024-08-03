@@ -6,6 +6,7 @@
         :label="label"
         :label-for="id"
         class="d-flex"
+        style="align-items: center;"
     >
          <slot />
     </b-form-group>
