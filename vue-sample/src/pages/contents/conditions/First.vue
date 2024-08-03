@@ -55,24 +55,6 @@ import Subtitle from "../../common/snipets/titles/Subtitle";
 
 import { informations } from "../../scripts/data/informations";
 
-    // const doubles = [informations.double1, informations.double2];
-    // const doubles = [
-    //     Object.assign(informations.double1, { label: "項目②" }),
-    //     Object.assign(informations.double2, { label: "項目③" })
-    // ];
-
-    // const triples = [
-    //     Object.assign(informations.triple1, { label: "項目④" }),
-    //     Object.assign(informations.triple2, { label: "項目⑤" }),
-    //     Object.assign(informations.triple3, { label: "項目⑥" })
-    // ];
-
-    // const triples = [
-    //     Object.assign(informations.triple1, { label: "項目④" }),
-    //     Object.assign(informations.triple2, { label: "項目⑤" }),
-    //     Object.assign(informations.triple3, { label: "項目⑥" })
-    // ];
-
     export default {
         components: {
             CheckboxForm,
@@ -84,8 +66,6 @@ import { informations } from "../../scripts/data/informations";
         },
         data() {
             return {
-                // doubles,
-                // triples,
                 informations,
                 options: [
                     { text: 'First radio', value: 'first' },
