@@ -11,18 +11,34 @@
         </SingleColumn>
 
         <DoubleColumn
-            :properties="doubles"
+            :properties="[
+                {id: informations.double1.id, label: '項目②'},
+                {id: informations.double2.id, label: '項目③'}
+            ]"
         >
-            <template v-for="double in doubles" v-slot:[double.id]>
-                <TextForm :id="double.id" :value="double.value" :key="double.key"/>
+            <template v-slot:[informations.double1.id]>
+                <TextForm :id="informations.double1.id" :value="informations.double1.value" />
+            </template>
+            <template v-slot:[informations.double2.id]>
+                <TextForm :id="informations.double2.id" :value="informations.double2.value" />
             </template>
         </DoubleColumn>
 
         <TripleColumn
-            :properties="triples"
+            :properties="[
+                {id: informations.triple1.id, label: '項目②'},
+                {id: informations.triple2.id, label: '項目③'},
+                {id: informations.triple3.id, label: '項目③'}
+            ]"
         >
-            <template v-for="triple in triples" v-slot:[triple.id]>
-                <TextForm :id="triple.id" :value="triple.value" :key="triple.key"/>
+            <template v-slot:[informations.triple1.id]>
+                <TextForm :id="informations.triple1.id" :value="informations.triple1.value" />
+            </template>
+            <template v-slot:[informations.triple2.id]>
+                <TextForm :id="informations.triple2.id" :value="informations.triple2.value" />
+            </template>
+            <template v-slot:[informations.triple3.id]>
+                <TextForm :id="informations.triple3.id" :value="informations.triple3.value" />
             </template>
         </TripleColumn>
     </div>
@@ -37,16 +53,23 @@ import Subtitle from "../../common/snipets/titles/Subtitle";
 
 import { informations } from "../../scripts/data/informations";
 
-    const doubles = [
-        Object.assign(informations.double1, { label: "項目②" }),
-        Object.assign(informations.double2, { label: "項目③" })
-    ];
+    // const doubles = [informations.double1, informations.double2];
+    // const doubles = [
+    //     Object.assign(informations.double1, { label: "項目②" }),
+    //     Object.assign(informations.double2, { label: "項目③" })
+    // ];
 
-    const triples = [
-        Object.assign(informations.triple1, { label: "項目④" }),
-        Object.assign(informations.triple2, { label: "項目⑤" }),
-        Object.assign(informations.triple3, { label: "項目⑥" })
-    ];
+    // const triples = [
+    //     Object.assign(informations.triple1, { label: "項目④" }),
+    //     Object.assign(informations.triple2, { label: "項目⑤" }),
+    //     Object.assign(informations.triple3, { label: "項目⑥" })
+    // ];
+
+    // const triples = [
+    //     Object.assign(informations.triple1, { label: "項目④" }),
+    //     Object.assign(informations.triple2, { label: "項目⑤" }),
+    //     Object.assign(informations.triple3, { label: "項目⑥" })
+    // ];
 
     export default {
         components: {
@@ -58,8 +81,9 @@ import { informations } from "../../scripts/data/informations";
         },
         data() {
             return {
-                doubles,
-                triples
+                // doubles,
+                // triples,
+                informations
             };
         }
     };

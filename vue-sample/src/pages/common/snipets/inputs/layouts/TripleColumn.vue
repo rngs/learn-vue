@@ -12,41 +12,6 @@
                 </FormGroup>
             </b-col>
         </b-row>
-        <!-- <b-row>
-            <b-col sm="4">
-                <FormGroup
-                    :id="id"
-                    :value="value"
-                    :label="label"
-                    label-cols="6"
-                    content-cols="6"
-                >
-                    <slot />
-                </FormGroup>
-            </b-col>
-            <b-col sm="4">
-                <FormGroup
-                    :id="id"
-                    :value="value"
-                    :label="label"
-                    label-cols="6"
-                    content-cols="6"
-                >
-                    <slot />
-                </FormGroup>
-            </b-col>
-            <b-col sm="4">
-                <FormGroup
-                    :id="id"
-                    :value="value"
-                    :label="label"
-                    label-cols="6"
-                    content-cols="6"
-                >
-                    <slot />
-                </FormGroup>
-            </b-col>
-        </b-row> -->
     </b-container>
 </template>
 
