@@ -7,7 +7,8 @@
             value="value1"
             label="項目①"
         >
-            <TextForm id="item1" value="value1" />
+            <!-- <TextForm id="item1" value="value1" /> -->
+            <CheckboxForm :id="item1" :value="value1" :options="options" />
         </SingleColumn>
 
         <DoubleColumn
@@ -20,7 +21,7 @@
                 <TextForm :id="informations.double1.id" :value="informations.double1.value" />
             </template>
             <template v-slot:[informations.double2.id]>
-                <TextForm :id="informations.double2.id" :value="informations.double2.value" />
+                <CheckboxForm :id="informations.double2.id" :value="informations.double2.value" :options="options" :selected="informations.double2.value" />
             </template>
         </DoubleColumn>
 
@@ -45,7 +46,8 @@
 </template>
 
 <script>
-    import TextForm from "../../common/parts/inputs/types/TextForm";
+    import CheckboxForm from "../../common/parts/inputs/types/CheckboxForm";
+import TextForm from "../../common/parts/inputs/types/TextForm";
 import DoubleColumn from "../../common/snipets/inputs/layouts/DoubleColumn";
 import SingleColumn from "../../common/snipets/inputs/layouts/SingleColumn";
 import TripleColumn from "../../common/snipets/inputs/layouts/TripleColumn";
@@ -73,6 +75,7 @@ import { informations } from "../../scripts/data/informations";
 
     export default {
         components: {
+            CheckboxForm,
             DoubleColumn,
             SingleColumn,
             Subtitle,
@@ -83,7 +86,12 @@ import { informations } from "../../scripts/data/informations";
             return {
                 // doubles,
                 // triples,
-                informations
+                informations,
+                options: [
+                    { text: 'First radio', value: 'first' },
+                    { text: 'Second radio', value: 'second' },
+                    { text: 'Third radio', value: 'double2' }
+                ]
             };
         }
     };
