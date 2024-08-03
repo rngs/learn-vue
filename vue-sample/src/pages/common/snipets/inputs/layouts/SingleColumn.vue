@@ -2,7 +2,6 @@
     <b-container class="text-nowrap mb-2">
         <FormGroup
             :id="id"
-            :value="value"
             :label="label"
             label-cols="2"
             content-cols="5"

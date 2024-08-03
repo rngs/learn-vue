@@ -16,7 +16,6 @@
         props: [
             "id",
             "label",
-            "value",
             "labelCols",
             "contentCols"
         ]
