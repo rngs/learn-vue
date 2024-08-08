@@ -8,7 +8,8 @@
             label="項目①"
         >
             <!-- <TextForm id="item1" value="value1" /> -->
-            <CheckboxForm :id="item1" :value="value1" :options="options" />
+            <!-- <CheckboxForm :id="item1" :value="value1" :options="options" /> -->
+             <SelectForm />
         </SingleColumn>
 
         <DoubleColumn
@@ -18,7 +19,8 @@
             ]"
         >
             <template v-slot:[informations.double1.id]>
-                <TextForm :id="informations.double1.id" :value="informations.double1.value" />
+                <!-- <TextForm :id="informations.double1.id" :value="informations.double1.value" /> -->
+                <SelectForm />
             </template>
             <template v-slot:[informations.double2.id]>
                 <CheckboxForm :id="informations.double2.id" :value="informations.double2.value" :options="options" :selected="informations.double2.value" />
@@ -33,7 +35,8 @@
             ]"
         >
             <template v-slot:[informations.triple1.id]>
-                <TextForm :id="informations.triple1.id" :value="informations.triple1.value" />
+                <!-- <TextForm :id="informations.triple1.id" :value="informations.triple1.value" /> -->
+                <SelectForm />
             </template>
             <template v-slot:[informations.triple2.id]>
                 <TextForm :id="informations.triple2.id" :value="informations.triple2.value" />
@@ -47,6 +50,7 @@
 
 <script>
     import CheckboxForm from "../../common/parts/inputs/types/CheckboxForm";
+import SelectForm from "../../common/parts/inputs/types/SelectForm";
 import TextForm from "../../common/parts/inputs/types/TextForm";
 import DoubleColumn from "../../common/snipets/inputs/layouts/DoubleColumn";
 import SingleColumn from "../../common/snipets/inputs/layouts/SingleColumn";
@@ -59,6 +63,7 @@ import { informations } from "../../scripts/data/informations";
         components: {
             CheckboxForm,
             DoubleColumn,
+            SelectForm,
             SingleColumn,
             Subtitle,
             TextForm,
